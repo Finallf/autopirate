@@ -217,7 +217,7 @@ function AutoPirate() {
 	function click_captureBtn(){				// Função que clica no botão "Capturar".
 		pauseAP = localStorage.getItem('pauseAP');
 		if ( ($('a.capture').length == 1) && ($('a.button_disabled').length == 0) && ( pauseAP == 1 ) ){
-			setTimeout( "$('a.capture').click();", delay );
+			setTimeout( "$('a.capture').eq(0).click();", delay );
 			localStorage.setItem('timeAP', '150000');
 			clearInterval( int1 );
 			setTimeout( myPause, 151000 );		// pausa por 2.5 minutos e 1 segundo.
